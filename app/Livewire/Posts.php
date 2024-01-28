@@ -30,7 +30,7 @@ class Posts extends Component
         ]);
 
         Post::create($validatedData);
-
+        sleep(1);
         session()->flash('message', 'Post Created Successfully.');
 
         $this->resetInputFields();

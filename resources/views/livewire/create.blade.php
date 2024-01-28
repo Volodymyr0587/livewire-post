@@ -9,5 +9,7 @@
         <textarea type="email" class="form-control" id="exampleFormControlInput2" wire:model="body" placeholder="Enter Body"></textarea>
         @error('body') <span class="text-danger">{{ $message }}</span>@enderror
     </div>
-    <button wire:click.prevent="store()" class="btn btn-success">Save</button>
+    <button wire:click.prevent="store()" class="btn btn-success">
+    <span wire:loading.class='spinner-border spinner-border-sm'></span>
+    Save</button>
 </form>
